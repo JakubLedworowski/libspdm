@@ -255,7 +255,7 @@ libspdm_return_t libspdm_encode_secured_message(
         }
 
         a_data = (uint8_t *)record_header1;
-        enc_msg = (uint8_t *)(record_header2 + 1);
+        enc_msg = (uint8_t *)(record_header2 + sizeof(spdm_secured_message_a_data_header2_t));
         dec_msg = (uint8_t *)enc_msg_header;
         tag = (uint8_t *)record_header1 + record_header_size +
               cipher_text_size;
