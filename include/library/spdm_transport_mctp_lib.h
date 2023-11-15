@@ -11,9 +11,17 @@
 #include "library/spdm_crypt_lib.h"
 #include "industry_standard/mctp.h"
 
+#ifndef LIBSPDM_MCTP_ALIGNMENT
 #define LIBSPDM_MCTP_ALIGNMENT 1
+#endif
+
+#ifndef LIBSPDM_MCTP_SEQUENCE_NUMBER_COUNT
 #define LIBSPDM_MCTP_SEQUENCE_NUMBER_COUNT 2
+#endif
+
+#ifndef LIBSPDM_MCTP_MAX_RANDOM_NUMBER_COUNT
 #define LIBSPDM_MCTP_MAX_RANDOM_NUMBER_COUNT 32
+#endif
 
 /* Required sender/receive buffer in device io.
  * +-------+--------+---------------------------+------+--+------+---+--------+-----+
